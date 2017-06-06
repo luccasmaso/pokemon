@@ -1,0 +1,64 @@
+$input-padding-x: .7em !default;
+$input-padding-y: .4em !default;
+
+$input-line-height: 1.25 !default;
+
+$input-background: #FFF !default;
+
+$input-color: black !default;
+$input-color-focus: black !default;
+
+$input-color-placeholder: #DDD !default;
+
+$input-border-color: #DDD !default;
+$input-border-focus: #999 !default;
+$input-border-radius: 3px;
+$input-border-width: 1px !default;
+
+.input__compose {
+  margin: 0 -5px;
+  margin-bottom: .3em;
+
+  .input__field {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  &.input__compose--2 .input__field {
+    width: calc(50% - 10px);
+  }
+
+  &.input__compose--3 .input__field {
+    width: calc(33.33% - 10px);
+  }
+}
+
+.input__field {
+  margin-bottom: .5em;
+
+  label {
+    display: block;
+    text-align: left;
+    margin-bottom: .3em;
+  }
+
+  input {
+    width: 100%;
+    display: block;
+    background-color: $input-background;
+    padding: $input-padding-y $input-padding-x;
+    color: $input-color;
+    font-size: $font-size-base;
+    line-height: $input-line-height;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+    &:focus {
+      color: $input-color-focus;
+      border-color: $input-border-focus;
+      box-shadow: 0px 0px 6px -1px rgba(#DDD, .3);
+      outline: none;
+    }
+  }
+}
